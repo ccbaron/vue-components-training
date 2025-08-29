@@ -1,110 +1,142 @@
 <script setup>
-import IdCard from './components/IdCard.vue';
-import Random from './components/Random.vue';
-import BoxColor from './components/BoxColor.vue';
-import CreditCard from './components/CreditCard.vue';
-import Rating from './components/Rating.vue';
-import DriverCard from './components/DriverCard.vue';
-import LikeButton from './components/LikeButton.vue';
-import ClickablePicture from './components/ClickablePicture.vue';
-import Dice from './components/Dice.vue';
-import Carousel from './components/Carousel.vue';
-import NumbersTable from './components/NumbersTable.vue';
-import FaceBook from './components/FaceBook.vue';
-import SignupPage from './components/SignupPage.vue';
-import RGBColorPicker from './components/RGBColorPicker.vue';
+import IdCard from './components/IdCard.vue'
+import Random from './components/Random.vue'
+import BoxColor from './components/BoxColor.vue'
+import CreditCard from './components/CreditCard.vue'
+import Rating from './components/Rating.vue'
+import DriverCard from './components/DriverCard.vue'
+import LikeButton from './components/LikeButton.vue'
+import ClickablePicture from './components/ClickablePicture.vue'
+import Dice from './components/Dice.vue'
+import Carousel from './components/Carousel.vue'
+import NumbersTable from './components/NumbersTable.vue'
+import FaceBook from './components/FaceBook.vue'
+import SignupPage from './components/SignupPage.vue'
+import RGBColorPicker from './components/RGBColorPicker.vue'
 </script>
 
 <template>
-  <div id="app">
-    <h1>Creación de componentes con Vue</h1>
-    <p>Crea a continuación todos los componentes del ejercicio.</p>
+  <div class="wrap">
+    <h1>Vue Components Training</h1>
 
-    <!-- Componente IdCard -->
-    <IdCard
-      lastName="Doe"
-      firstName="John"
-      gender="male"
-      :height="178"
-      :birth="new Date('1992-07-14')"
-      picture="https://randomuser.me/api/portraits/men/44.jpg"
-    />
-    <IdCard
-      lastName="Delores"
-      firstName="Obrien"
-      gender="female"
-      :height="172"
-      :birth="new Date('1988-05-11')"
-      picture="https://randomuser.me/api/portraits/women/44.jpg"
-    />
+    <section>
+      <h2>IdCard</h2>
+      <div class="row">
+        <IdCard lastName="Doe" firstName="John" gender="male" :height="178" :birth="new Date('1992-07-14')" picture="https://randomuser.me/api/portraits/men/44.jpg" />
+        <IdCard lastName="Delores" firstName="Obrien" gender="female" :height="172" :birth="new Date('1988-05-11')" picture="https://randomuser.me/api/portraits/women/44.jpg" />
+      </div>
+    </section>
 
-    <!-- Componente Random -->
-    <Random :min="1" :max="6" />
-    <Random :min="1" :max="100" />
+    <section>
+      <h2>Random</h2>
+      <div class="row"><Random :min="1" :max="6" /><Random :min="1" :max="100" /></div>
+    </section>
 
-    <!-- Componente BoxColor -->
-    <BoxColor :r="255" :g="0" :b="0" />
-    <BoxColor :r="128" :g="255" :b="0" />
+    <section>
+      <h2>BoxColor</h2>
+      <div class="row"><BoxColor :r="255" :g="0" :b="0" /><BoxColor :r="128" :g="255" :b="90" /></div>
+    </section>
 
-    <!-- Componente CreditCard -->
-    <CreditCard
-      type="Visa"
-      number="0123456789018845"
-      :expiration-month="3"
-      :expiration-year="2021"
-      bank="BNP"
-      owner="Maxence Bouret"
-      bgColor="#11aa99"
-      color="white"
-    />
-    <CreditCard
-      type="Master Card"
-      number="0123456789010995"
-      :expiration-month="3"
-      :expiration-year="2021"
-      bank="N26"
-      owner="Maxence Bouret"
-      bgColor="#eeeeee"
-      color="#222222"
-    />
+    <section>
+      <h2>CreditCard</h2>
+      <div class="row">
+        <CreditCard type="Visa" number="0123456789018845" :expiration-month="3" :expiration-year="2027" bank="BNP" owner="Maxence Bouret" bgColor="#11aa99" color="#ffffff" />
+        <CreditCard type="Master Card" number="0123456789010995" :expiration-month="3" :expiration-year="2026" bank="N26" owner="Maxence Bouret" bgColor="#eeeeee" color="#222222" />
+      </div>
+    </section>
 
-    <!-- Componente Rating -->
-    <Rating :value="4.5" />
+    <section>
+      <h2>Rating</h2>
+      <div class="row"><Rating :value="0" /><Rating :value="1.4" /><Rating :value="3.7" /><Rating :value="5" /></div>
+    </section>
 
-    <!-- Componente DriverCard -->
-    <DriverCard
-      name="Travis Kalanick"
-      :rating="4.2"
-      img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
-      :car="{ model: 'Toyota Corolla Altis', licensePlate: 'CO42DE' }"
-    />
+    <section>
+      <h2>DriverCard</h2>
+      <DriverCard name="Travis Kalanick" :rating="4.2" img="https://randomuser.me/api/portraits/men/44.jpg" :car="{ model: 'Toyota Corolla Altis', licensePlate: 'CO42DE' }" />
+    </section>
 
-    <!-- Componente LikeButton -->
-    <LikeButton />
+    <section>
+      <h2>LikeButton</h2>
+      <div class="row"><LikeButton /><LikeButton /></div>
+    </section>
 
-    <!-- Componente ClickablePicture -->
-    <ClickablePicture img="/public/maxence.png" img-clicked="/public/maxence-glasses.png" />
+    <section>
+      <h2>ClickablePicture</h2>
+      <ClickablePicture img="https://i.pravatar.cc/150?img=12" imgClicked="https://i.pravatar.cc/150?img=65" />
+    </section>
 
-    <!-- Componente Dice -->
-    <Dice />
+    <section>
+      <h2>Dice</h2>
+      <Dice />
+    </section>
 
-    <!-- Componente Carousel -->
-    <Carousel :images="['/public/visa.png', '/public/master-card.svg']" />
+    <section>
+      <h2>Carousel</h2>
+      <Carousel :images="[
+        'https://picsum.photos/seed/1/600/400',
+        'https://picsum.photos/seed/2/600/400',
+        'https://picsum.photos/seed/3/600/400',
+        'https://picsum.photos/seed/4/600/400'
+      ]" />
+    </section>
 
-    <!-- Componente NumbersTable -->
-    <NumbersTable :limit="12" />
+    <section>
+      <h2>NumbersTable</h2>
+      <NumbersTable :limit="24" />
+    </section>
 
-    <!-- Componente FaceBook -->
-    <FaceBook />
+    <section>
+      <h2>FaceBook</h2>
+      <FaceBook />
+    </section>
 
-    <!-- Componente SignupPage -->
-    <SignupPage />
+    <section>
+      <h2>SignupPage</h2>
+      <SignupPage />
+    </section>
 
-    <!-- Componente RGBColorPicker -->
-    <RGBColorPicker />
+    <section>
+      <h2>RGBColorPicker</h2>
+      <RGBColorPicker />
+    </section>
   </div>
 </template>
 
 <style scoped>
-/* Add any global styles here */
+.wrap {
+  display: grid;
+  gap: 24px;
+  padding: 20px;
+  max-width: 980px;
+  margin: 0 auto;
+  background-color: #1e293b; /* Fondo oscuro para el contenedor principal */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+section {
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px;
+  background: #475569; /* Fondo gris oscuro para las secciones */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+h1 {
+  margin: 0 0 4px;
+  color: #f8fafc; /* Texto blanco para el título principal */
+}
+h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  color: #e2e8f0; /* Texto gris claro para los subtítulos */
+}
+p, span, div {
+  color: #f1f5f9; /* Texto blanco para el contenido */
+}
 </style>
+
