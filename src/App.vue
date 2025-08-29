@@ -1,4 +1,5 @@
 <script setup>
+// Importamos TODOS los componentes del lab para mostrarlos en secciones
 import IdCard from './components/IdCard.vue'
 import Random from './components/Random.vue'
 import BoxColor from './components/BoxColor.vue'
@@ -19,82 +20,152 @@ import RGBColorPicker from './components/RGBColorPicker.vue'
   <div class="wrap">
     <h1>Vue Components Training</h1>
 
+    <!-- Iteración 1: IdCard -->
     <section>
       <h2>IdCard</h2>
       <div class="row">
-        <IdCard lastName="Doe" firstName="John" gender="male" :height="178" :birth="new Date('1992-07-14')" picture="https://randomuser.me/api/portraits/men/44.jpg" />
-        <IdCard lastName="Delores" firstName="Obrien" gender="female" :height="172" :birth="new Date('1988-05-11')" picture="https://randomuser.me/api/portraits/women/44.jpg" />
+        <!-- Ejemplos de tarjetas -->
+        <IdCard
+          lastName="Doe"
+          firstName="John"
+          gender="male"
+          :height="178"
+          :birth="new Date('1992-07-14')"
+          picture="https://randomuser.me/api/portraits/men/44.jpg"
+        />
+        <IdCard
+          lastName="Delores"
+          firstName="Obrien"
+          gender="female"
+          :height="172"
+          :birth="new Date('1988-05-11')"
+          picture="https://randomuser.me/api/portraits/women/44.jpg"
+        />
       </div>
     </section>
 
+    <!-- Iteración 2: Random -->
     <section>
       <h2>Random</h2>
-      <div class="row"><Random :min="1" :max="6" /><Random :min="1" :max="100" /></div>
+      <div class="row">
+        <Random :min="1" :max="6" />
+        <Random :min="1" :max="100" />
+      </div>
     </section>
 
+    <!-- Iteración 3: BoxColor -->
     <section>
       <h2>BoxColor</h2>
-      <div class="row"><BoxColor :r="255" :g="0" :b="0" /><BoxColor :r="128" :g="255" :b="90" /></div>
+      <div class="row">
+        <BoxColor :r="255" :g="0" :b="0" />
+        <BoxColor :r="128" :g="255" :b="90" />
+      </div>
     </section>
 
+    <!-- Iteración 4: CreditCard -->
     <section>
       <h2>CreditCard</h2>
       <div class="row">
-        <CreditCard type="Visa" number="0123456789018845" :expiration-month="3" :expiration-year="2027" bank="BNP" owner="Maxence Bouret" bgColor="#11aa99" color="#ffffff" />
-        <CreditCard type="Master Card" number="0123456789010995" :expiration-month="3" :expiration-year="2026" bank="N26" owner="Maxence Bouret" bgColor="#eeeeee" color="#222222" />
+        <CreditCard
+          type="Visa"
+          number="0123456789018845"
+          :expiration-month="3"
+          :expiration-year="2027"
+          bank="BNP"
+          owner="Maxence Bouret"
+          bgColor="#11aa99"
+          color="#ffffff"
+        />
+        <CreditCard
+          type="Master Card"
+          number="0123456789010995"
+          :expiration-month="3"
+          :expiration-year="2026"
+          bank="N26"
+          owner="Maxence Bouret"
+          bgColor="#eeeeee"
+          color="#222222"
+        />
       </div>
     </section>
 
+    <!-- Iteración 5: Rating -->
     <section>
       <h2>Rating</h2>
-      <div class="row"><Rating :value="0" /><Rating :value="1.4" /><Rating :value="3.7" /><Rating :value="5" /></div>
+      <div class="row">
+        <Rating :value="0" />
+        <Rating :value="1.4" />
+        <Rating :value="3.7" />
+        <Rating :value="5" />
+      </div>
     </section>
 
+    <!-- Iteración 6: DriverCard -->
     <section>
       <h2>DriverCard</h2>
-      <DriverCard name="Travis Kalanick" :rating="4.2" img="https://randomuser.me/api/portraits/men/44.jpg" :car="{ model: 'Toyota Corolla Altis', licensePlate: 'CO42DE' }" />
+      <DriverCard
+        name="Travis Kalanick"
+        :rating="4.2"
+        img="https://randomuser.me/api/portraits/men/44.jpg"
+        :car="{ model: 'Toyota Corolla Altis', licensePlate: 'CO42DE' }"
+      />
     </section>
 
+    <!-- Iteración 7: LikeButton -->
     <section>
       <h2>LikeButton</h2>
       <div class="row"><LikeButton /><LikeButton /></div>
     </section>
 
+    <!-- Iteración 8: ClickablePicture -->
     <section>
       <h2>ClickablePicture</h2>
-      <ClickablePicture img="https://i.pravatar.cc/150?img=12" imgClicked="https://i.pravatar.cc/150?img=65" />
+      <ClickablePicture
+        img="https://i.pravatar.cc/150?img=12"
+        imgClicked="https://i.pravatar.cc/150?img=65"
+      />
     </section>
 
+    <!-- Iteración 9: Dice -->
     <section>
       <h2>Dice</h2>
+      <!-- Al hacer click, se mostrará un dado vacío 1s y luego un número aleatorio -->
       <Dice />
     </section>
 
+    <!-- Iteración 10: Carousel -->
     <section>
       <h2>Carousel</h2>
-      <Carousel :images="[
-        'https://picsum.photos/seed/1/600/400',
-        'https://picsum.photos/seed/2/600/400',
-        'https://picsum.photos/seed/3/600/400',
-        'https://picsum.photos/seed/4/600/400'
-      ]" />
+      <Carousel
+        :images="[
+          'https://picsum.photos/seed/1/600/400',
+          'https://picsum.photos/seed/2/600/400',
+          'https://picsum.photos/seed/3/600/400',
+          'https://picsum.photos/seed/4/600/400'
+        ]"
+      />
     </section>
 
+    <!-- Iteración 11: NumbersTable -->
     <section>
       <h2>NumbersTable</h2>
       <NumbersTable :limit="24" />
     </section>
 
+    <!-- Iteraciones 12–13: FaceBook (simple + avanzado) -->
     <section>
       <h2>FaceBook</h2>
+      <!-- Si más abajo conectas berlin.json, este componente lo usará -->
       <FaceBook />
     </section>
 
+    <!-- Iteración 14: SignupPage -->
     <section>
       <h2>SignupPage</h2>
       <SignupPage />
     </section>
 
+    <!-- Iteración 15: RGBColorPicker -->
     <section>
       <h2>RGBColorPicker</h2>
       <RGBColorPicker />

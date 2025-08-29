@@ -1,0 +1,30 @@
+[
+    {
+        "firstName": "John",
+        "lastName": "Doe",
+        "country": "USA",
+        "isStudent": true,
+        "img": "https://randomuser.me/api/portraits/men/12.jpg"
+    },
+    {
+        "firstName": "Obrien",
+        "lastName": "Delores",
+        "country": "Germany",
+        "isStudent": false,
+        "img": "https://randomuser.me/api/portraits/women/34.jpg"
+    },
+    {
+        "firstName": "Alex",
+        "lastName": "Müller",
+        "country": "Germany",
+        "isStudent": true,
+        "img": "https://randomuser.me/api/portraits/men/44.jpg"
+    },
+    {
+        "firstName": "Camille",
+        "lastName": "Durand",
+        "country": "France",
+        "isStudent": false,
+        "img": "https://randomuser.me/api/portraits/women/64.jpg"
+    }
+]
