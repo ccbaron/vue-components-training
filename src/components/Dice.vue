@@ -1,5 +1,6 @@
 <template><img :src="src" @click="roll" alt="dice" /></template>
 <script>
+// Componente para mostrar un dado que cambia su valor al hacer clic, con animación de lanzamiento
 export default {
   name:'Dice',
   data(){ return { value: this.rand1to6(), rolling:false } },
@@ -18,4 +19,10 @@ export default {
   }
 }
 </script>
-<style scoped>img{ width:100px; cursor:pointer }</style>
+<style scoped> 
+
+img { 
+  width:100px; 
+  cursor:pointer 
+  }
+  </style>

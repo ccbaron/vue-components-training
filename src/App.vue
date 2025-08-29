@@ -1,5 +1,5 @@
 <script setup>
-// Importamos TODOS los componentes del lab para mostrarlos en secciones
+// Importamos todos los componentes del lab para mostrarlos en secciones
 import IdCard from './components/IdCard.vue'
 import Random from './components/Random.vue'
 import BoxColor from './components/BoxColor.vue'

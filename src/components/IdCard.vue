@@ -15,6 +15,7 @@
 </template>
 
 <script>
+// Componente para mostrar una tarjeta de identificación
 export default {
   name: 'IdCard',
   props: {
@@ -30,6 +31,7 @@ export default {
 </script>
 
 <style scoped>
+
 /* Estilos para el componente de tarjeta de identificación */
 .id-card {
   display: flex;

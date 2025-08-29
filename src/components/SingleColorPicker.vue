@@ -7,6 +7,7 @@
   </template>
   
   <script>
+  // Componente para seleccionar un valor de color individual (R, G o B) y mostrar una vista previa
   export default {
     name:'SingleColorPicker',
     props:{ color:{ type:String, required:true }, modelValue:{ type:Number, required:true } },
@@ -23,6 +24,17 @@
   </script>
   
   <style scoped>
-  .row{ display:flex; align-items:center; gap:10px }
-  .preview{ width:30px; height:20px; border:1px solid #ccc }
+
+  .row { 
+    display:flex; 
+    align-items:center; 
+    gap:10px 
+  }
+
+  .preview { 
+    width:30px; 
+    height:20px; 
+    border:1px solid #ccc 
+  }
+  
   </style>

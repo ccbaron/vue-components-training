@@ -6,6 +6,7 @@
 </template>
 
 <script>
+// Componente para mostrar un número aleatorio entre dos valores dados (min y max)
 export default {
   name: 'Random',
   props: {

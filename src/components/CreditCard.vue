@@ -14,6 +14,7 @@
   </template>
   
   <script>
+  // Componente para mostrar una tarjeta de crédito con detalles y estilo personalizado
   export default {
     name: 'CreditCard',
     props: {
@@ -28,11 +29,38 @@
   </script>
   
   <style scoped>
-  .card{ width:320px; border-radius:10px; padding:18px; display:flex; flex-direction:column; gap:10px }
-  .type{ display:flex; justify-content:flex-end }
-  .type img{ height:22px }
-  .number{ font-size:1.4rem; letter-spacing:3px }
-  .meta{ display:flex; gap:10px; font-size:.9rem; opacity:.9 }
-  .owner{ font-weight:600 }
+  .card { 
+    width:320px; 
+    border-radius:10px; 
+    padding:18px; 
+    display:flex; 
+    flex-direction:column; 
+    gap:10px 
+  }
+
+  .type { 
+    display:flex; 
+    justify-content:flex-end 
+  }
+
+  .type img { 
+    height:22px 
+  }
+
+  .number { 
+    font-size:1.4rem; 
+    letter-spacing:3px 
+  }
+
+  .meta { 
+    display:flex; 
+    gap:10px; 
+    font-size:.9rem; 
+    opacity:.9 
+  }
+
+  .owner { 
+    font-weight:600 
+  }
   </style>
   

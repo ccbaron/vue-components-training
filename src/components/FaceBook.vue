@@ -5,8 +5,7 @@
         v-for="c in countries"
         :key="c"
         :class="{ active: c === activeCountry }"
-        @click="toggleCountry(c)"
-      >
+        @click="toggleCountry(c)" >
         {{ c }}
       </button>
       <button @click="toggleCountry(null)">Reset</button>
@@ -17,8 +16,7 @@
         v-for="p in profiles"
         :key="p.firstName + p.lastName"
         class="card"
-        :class="{ highlight: activeCountry && p.country === activeCountry }"
-      >
+        :class="{ highlight: activeCountry && p.country === activeCountry }" >
         <img :src="p.img" alt="Profile picture" />
         <div>
           <p><strong>First name:</strong> {{ p.firstName }}</p>
@@ -32,6 +30,7 @@
 </template>
 
 <script>
+// Componente para mostrar perfiles de usuarios con filtro por país
 import profiles from '../data/berlin.json';
 
 export default {

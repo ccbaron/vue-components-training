@@ -11,6 +11,7 @@
   </template>
   
   <script>
+  // Componente para seleccionar y mostrar un color RGB usando tres selectores individuales
   import SingleColorPicker from './SingleColorPicker.vue'
   export default {
     name:'RGBColorPicker',
@@ -21,8 +22,25 @@
   </script>
   
   <style scoped>
-  .rgb{ display:grid; gap:10px; max-width:360px }
-  .result{ display:flex; align-items:center; gap:10px }
-  .square{ width:60px; height:40px; border:1px solid #ccc; border-radius:6px }
+
+  .rgb { 
+    display:grid; 
+    gap:10px; 
+    max-width:360px 
+  }
+
+  .result { 
+    display:flex; 
+    align-items:center; 
+    gap:10px 
+  }
+
+  .square { 
+    width:60px; 
+    height:40px; 
+    border:1px solid #ccc; 
+    border-radius:6px 
+  }
+  
   </style>
   

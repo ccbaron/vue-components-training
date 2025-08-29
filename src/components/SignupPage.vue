@@ -27,6 +27,7 @@
   </template>
   
   <script>
+  // Componente para una página de registro con validación de email, verificación de fuerza de contraseña y saludo según nacionalidad
   export default {
     name:'SignupPage',
     data(){
@@ -54,12 +55,41 @@
   </script>
   
   <style scoped>
-  .form{ display:grid; gap:12px; max-width:360px }
-  input, select{ padding:8px; border:1px solid #ccc; border-radius:6px }
-  input.invalid{ border-color:#ef4444; background:#fee2e2 }
-  input.weak{ border-color:#ef4444 }
-  input.medium{ border-color:#f59e0b }
-  input.strong{ border-color:#10b981 }
-  .result{ margin-top:10px; padding:10px; border:1px dashed #bbb; border-radius:6px }
+
+  .form { 
+    display:grid; 
+    gap:12px; 
+    max-width:360px 
+  }
+
+  input, select { 
+    padding:8px; 
+    border:1px solid #ccc; 
+    border-radius:6px 
+  }
+
+  input.invalid { 
+    border-color:#ef4444; 
+    background:#fee2e2 
+  }
+
+  input.weak { 
+    border-color:#ef4444 
+  }
+
+  input.medium { 
+    border-color:#f59e0b 
+  }
+
+  input.strong { 
+    border-color:#10b981 
+  }
+
+  .result { 
+    margin-top:10px; 
+    padding:10px; 
+    border:1px dashed #bbb; 
+    border-radius:6px 
+  }
   </style>
   

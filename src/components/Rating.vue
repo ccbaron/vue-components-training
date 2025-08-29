@@ -1,5 +1,9 @@
-<template><div class="rating">{{ stars }}</div></template>
+<template>
+<div class="rating">{{ stars }}</div>
+</template>
+
 <script>
+// Componente para mostrar una calificación en estrellas basada en un valor numérico
 export default {
   name:'Rating',
   props:{ value: Number },
@@ -11,4 +15,11 @@ export default {
   }
 }
 </script>
-<style scoped>.rating{ font-size:1.4rem }</style>
+
+<style scoped>
+
+.rating { 
+  font-size:1.4rem 
+  }
+  
+  </style>

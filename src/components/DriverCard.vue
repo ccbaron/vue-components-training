@@ -10,6 +10,7 @@
   </template>
   
   <script>
+  // Componente para mostrar una tarjeta de conductor con su información y estilo personalizado
   export default {
     name:'DriverCard',
     props:{ name:String, rating:Number, img:String, car:{ type:Object, required:true } },
@@ -20,8 +21,26 @@
   </script>
   
   <style scoped>
-  .driver{ display:flex; align-items:center; gap:16px; background:#455eb5; color:#fff; padding:16px; border-radius:12px }
-  .driver img{ width:64px; height:64px; border-radius:50%; object-fit:cover; border:2px solid #fff4 }
-  .rate{ font-size:1.2rem }
+  .driver { 
+    display:flex; 
+    align-items:center; 
+    gap:16px; 
+    background:#455eb5; 
+    color:#fff; 
+    padding:16px; 
+    border-radius:12px 
+  }
+
+  .driver img { 
+    width:64px; 
+    height:64px; 
+    border-radius:50%; 
+    object-fit:cover; 
+    border:2px solid #fff4 
+  }
+
+  .rate { 
+    font-size:1.2rem 
+  }
   </style>
   

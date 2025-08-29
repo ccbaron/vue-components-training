@@ -7,6 +7,7 @@
   </template>
   
   <script>
+  // Componente para mostrar un carrusel de imágenes con navegación
   export default {
     name:'Carousel',
     props:{ images:{ type:Array, required:true } },
@@ -19,8 +20,20 @@
   </script>
   
   <style scoped>
-  .carousel{ display:flex; align-items:center; gap:10px }
-  .carousel img{ width:260px; height:160px; object-fit:cover; border-radius:8px }
-  button{ padding:8px 10px }
+  .carousel { 
+    display:flex; 
+    align-items:center; 
+    gap:10px 
+  }
+
+  .carousel img {
+    width:260px;
+    height:160px;
+    object-fit:cover; 
+    border-radius:8px 
+  }
+  button { 
+    padding:8px 10px 
+  }
   </style>
   
