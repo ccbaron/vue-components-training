@@ -94,8 +94,10 @@ import RGBColorPicker from './components/RGBColorPicker.vue'
       <h2>Rating</h2>
       <div class="row">
         <Rating :value="0" />
-        <Rating :value="1.4" />
-        <Rating :value="3.7" />
+        <Rating :value="1" />
+        <Rating :value="2" />
+        <Rating :value="3" />
+        <Rating :value="4" />
         <Rating :value="5" />
       </div>
     </section>
