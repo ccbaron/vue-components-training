@@ -1,6 +1,6 @@
 <template>
     <div class="driver">
-      <img :src="img" alt="" />
+      <img :src="img" :alt="`Foto de ${name}`" />
       <div class="info">
         <h3>{{ name }}</h3>
         <p class="rate">{{ ratingStars }}</p>
@@ -24,23 +24,29 @@
   .driver { 
     display:flex; 
     align-items:center; 
-    gap:16px; 
+    gap: 24px; 
     background:#455eb5; 
     color:#fff; 
-    padding:16px; 
-    border-radius:12px 
+    padding:16px 28px; 
+    border-radius:18px 
   }
 
   .driver img { 
-    width:64px; 
-    height:64px; 
+    width:120px; 
+    height:120px; 
     border-radius:50%; 
     object-fit:cover; 
-    border:2px solid #fff4 
+    border:4px solid #fff4 
   }
 
   .rate { 
+    margin: 0;
     font-size:1.2rem 
   }
+
+  .info{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  }
   </style>
-  

@@ -1,8 +1,8 @@
 <template>
     <div class="card" :style="{ backgroundColor: bgColor, color: color }">
       <div class="type">
-        <img v-if="type==='Visa'" alt="Visa" src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg">
-        <img v-else alt="Master Card" src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg">
+        <img v-if="type==='Visa'" alt="Visa" src="/visa.png" />
+        <img v-else alt="Master Card" src="/master-card.svg" />
       </div>
       <div class="number">•••• •••• •••• {{ last4 }}</div>
       <div class="meta">

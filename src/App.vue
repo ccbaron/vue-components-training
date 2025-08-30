@@ -102,13 +102,22 @@ import RGBColorPicker from './components/RGBColorPicker.vue'
 
     <!-- Iteración 6: DriverCard -->
     <section>
+      
       <h2>DriverCard</h2>
+      <div class="row--clumns">
       <DriverCard
         name="Travis Kalanick"
         :rating="4.2"
-        img="https://randomuser.me/api/portraits/men/44.jpg"
+        img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
         :car="{ model: 'Toyota Corolla Altis', licensePlate: 'CO42DE' }"
       />
+      <DriverCard
+        name="Dara Khosrowshahi"
+        :rating="4.9"
+        img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+        :car="{ model: 'Audi A3', licensePlate: 'BE33ER' }"
+      />
+    </div>
     </section>
 
     <!-- Iteración 7: LikeButton -->
@@ -121,8 +130,8 @@ import RGBColorPicker from './components/RGBColorPicker.vue'
     <section>
       <h2>ClickablePicture</h2>
       <ClickablePicture
-        img="https://i.pravatar.cc/150?img=12"
-        imgClicked="https://i.pravatar.cc/150?img=65"
+        img="../public/maxence.png"
+        imgClicked="../public/maxence-glasses.png"
       />
     </section>
 
@@ -138,10 +147,10 @@ import RGBColorPicker from './components/RGBColorPicker.vue'
       <h2>Carousel</h2>
       <Carousel
         :images="[
-          'https://picsum.photos/seed/1/600/400',
-          'https://picsum.photos/seed/2/600/400',
-          'https://picsum.photos/seed/3/600/400',
-          'https://picsum.photos/seed/4/600/400'
+          'https://randomuser.me/api/portraits/women/1.jpg',
+          'https://randomuser.me/api/portraits/men/1.jpg',
+          'https://randomuser.me/api/portraits/women/2.jpg',
+          'https://randomuser.me/api/portraits/men/2.jpg'
         ]"
       />
     </section>
@@ -197,6 +206,16 @@ section {
   flex-wrap: wrap;
   align-items: flex-start;
 }
+
+.row.row--column{
+  flex-direction: column;
+  gap: 16px;
+}
+
+.row.row--column > *{
+  width: 100%;
+}
+
 h1 {
   margin: 0 0 4px;
   color: #f8fafc; /* Texto blanco para el título principal */
@@ -209,5 +228,10 @@ h2 {
 p, span, div {
   color: #f1f5f9; /* Texto blanco para el contenido */
 }
+
+.driver:not(:last-child){
+  margin-bottom: 16px;
+}
+
 </style>
 
